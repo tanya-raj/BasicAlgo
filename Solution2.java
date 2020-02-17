@@ -1,11 +1,16 @@
 import java.io.*;
 import java.util.Scanner;
+import software.amazon.codeguruprofilerjavaagent.Profiler;
+
 
 public class Solution2 {
 
    static BufferedWriter output;
    
    public static void main(String[] args) throws Exception {
+   new Profiler.Builder()
+   .profilingGroupName("Test-1")
+   .build().start();
    output = new BufferedWriter(new OutputStreamWriter(System.out, "ASCII"), 4096);
    Scanner in = new Scanner(System.in);
 
